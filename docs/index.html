@@ -7,10 +7,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-gradient: linear-gradient(to right top, #fff1f5, #f3e5f5, #e0f7fa);
+      --bg-gradient: linear-gradient(to right top, #fce1e4, #f3e5f5, #e0f7fa);
       --box-gradient: linear-gradient(145deg, #fff8f9, #f1f1f1);
+      --accent-color: #ffc7d1;
       --accent-text: #d988bc;
       --highlight: #f9a8d4;
+      --price-color: #ec4899;
     }
 
     * {
@@ -30,22 +32,38 @@
     }
 
     h1 {
-      font-size: 2.6rem;
-      margin-bottom: 2.5rem;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
       text-align: center;
       background: linear-gradient(to right, #f472b6, #c084fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .section-title {
-      font-size: 1.8rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      color: #d988bc;
+    .toggle-container {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .toggle-container label {
+      display: inline-flex;
+      align-items: center;
+      background: #ffeef5;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
+    }
+
+    .toggle-container input {
+      margin-left: 10px;
+      transform: scale(1.3);
+      accent-color: #f9a8d4;
     }
 
     .package {
+      position: relative;
       background: var(--box-gradient);
       border-radius: 20px;
       padding: 2rem;
@@ -62,26 +80,35 @@
       box-shadow: 0 14px 28px rgba(255, 182, 193, 0.35);
     }
 
+    .ribbon {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #f472b6;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.8rem;
+      border-radius: 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
     .package h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       color: #7e57c2;
     }
 
-    .price-old {
-      text-decoration: line-through;
-      color: #a1a1aa;
-      font-size: 1rem;
-      margin-right: 0.5rem;
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--price-color);
     }
 
-    .price-new {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #ec4899;
-      background: rgba(249, 168, 212, 0.2);
-      padding: 0.2rem 0.5rem;
-      border-radius: 8px;
+    .strike {
+      text-decoration: line-through;
+      color: #bbb;
+      font-weight: normal;
+      margin-right: 10px;
     }
 
     ul {
@@ -119,14 +146,17 @@
   </style>
 </head>
 <body>
-  <h1>💖 Video Editing Services – Soft & Stunning Pricing</h1>
+  <h1>💖 Video Editing Services – Cute & Clear Pricing</h1>
 
-  <!-- Informative Edit Packages -->
+  <div class="toggle-container">
+    <label>Show 30% Discount 🪄
+      <input type="checkbox" id="priceToggle" onchange="togglePrices()" />
+    </label>
+  </div>
+
   <div class="package">
-    <h2>🌷 Basic Package – 
-      <span class="price-old">₹429</span> 
-      <span class="price-new">₹299</span>
-    </h2>
+    <div class="ribbon">Limited Time</div>
+    <h2>🌷 Basic Package – <span class="price"><span class="strike">₹429</span><span class="discount">₹299</span></span></h2>
     <ul>
       <li>Captions</li>
       <li>Limited pictures & graphics</li>
@@ -135,10 +165,8 @@
   </div>
 
   <div class="package">
-    <h2>🌼 Intermediate Package – 
-      <span class="price-old">₹649</span> 
-      <span class="price-new">₹449</span>
-    </h2>
+    <div class="ribbon">Limited Time</div>
+    <h2>🌼 Intermediate Package – <span class="price"><span class="strike">₹649</span><span class="discount">₹449</span></span></h2>
     <ul>
       <li>Captions</li>
       <li>Pictures & graphics</li>
@@ -148,10 +176,8 @@
   </div>
 
   <div class="package">
-    <h2>🌸 Proficient Package – 
-      <span class="price-old">₹929</span> 
-      <span class="price-new">₹649</span>
-    </h2>
+    <div class="ribbon">Limited Time</div>
+    <h2>🌸 Proficient Package – <span class="price"><span class="strike">₹929</span><span class="discount">₹649</span></span></h2>
     <ul>
       <li>Captions with creative fonts, sizes & placement</li>
       <li>High-quality pictures & graphics</li>
@@ -160,53 +186,57 @@
     </ul>
   </div>
 
-  <!-- Additional/Specialized Edits -->
-  <h2 class="section-title">✨ Add-ons & Special Magic</h2>
-
   <div class="package">
-    <h2>📖 Carousel Edit – 
-      <span class="price-old">₹349</span> 
-      <span class="price-new">₹244</span>
-    </h2>
+    <h2>📖 Carousel Edit – <span class="price">₹349</span></h2>
     <ul>
-      <li>Scrapbook-style multi-slide carousel</li>
+      <li>Scrapbook Style Carousel</li>
+      <li>Creative and engaging visuals</li>
     </ul>
   </div>
 
   <div class="package">
-    <h2>🍰 Baking Edit – 
-      <span class="price-old">₹250</span> 
-      <span class="price-new">₹175</span>
-    </h2>
+    <h2>🍰 Baking Edit – <span class="price">₹250</span></h2>
     <ul>
-      <li>Soft pastel baking video edit</li>
       <li>Duration: Up to 1 minute</li>
+      <li>Perfect for showcasing recipes</li>
     </ul>
   </div>
 
   <div class="package">
-    <h2>📄 Cover Page (for informative edits) – 
-      <span class="price-old">₹50</span> 
-      <span class="price-new">₹35</span>
-    </h2>
+    <h2>📄 Cover Page (for Informative Edits) – <span class="price">₹50</span></h2>
     <ul>
-      <li>Intro-style page for better engagement</li>
+      <li>Visually appealing title screen</li>
     </ul>
   </div>
 
   <div class="package">
-    <h2>📸 YouTube Thumbnails – 
-      <span class="price-old">₹250</span> 
-      <span class="price-new">₹175</span>
-    </h2>
+    <h2>🎯 Thumbnails – <span class="price">₹250</span></h2>
     <ul>
-      <li>Engaging & visually appealing</li>
-      <li>Click-worthy & customized for your content</li>
+      <li>Custom YouTube thumbnails</li>
+      <li>Visually engaging and clickable</li>
     </ul>
   </div>
 
   <div class="footer">
-    🌈 Want something custom-made & full of pastel magic? Let’s bring your dream reel to life ✨
+    Want something even more magical? Let’s make your dream reel happen ✨
   </div>
+
+  <script>
+    function togglePrices() {
+      const toggled = document.getElementById('priceToggle').checked;
+      document.querySelectorAll('.strike').forEach(el => {
+        el.style.display = toggled ? 'inline' : 'none';
+      });
+      document.querySelectorAll('.discount').forEach(el => {
+        el.style.color = toggled ? '#ec4899' : '#444';
+      });
+    }
+
+    // Default to discount view
+    window.onload = () => {
+      document.getElementById('priceToggle').checked = true;
+      togglePrices();
+    };
+  </script>
 </body>
 </html>
