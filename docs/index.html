@@ -7,9 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-gradient: linear-gradient(to right top, #fce1e4, #f3e5f5, #e0f7fa);
+      --bg-gradient: linear-gradient(to right top, #fff1f5, #f3e5f5, #e0f7fa);
       --box-gradient: linear-gradient(145deg, #fff8f9, #f1f1f1);
-      --accent-color: #ffc7d1;
       --accent-text: #d988bc;
       --highlight: #f9a8d4;
     }
@@ -34,7 +33,6 @@
       font-size: 2.6rem;
       margin-bottom: 2.5rem;
       text-align: center;
-      color: var(--accent-text);
       background: linear-gradient(to right, #f472b6, #c084fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -70,10 +68,20 @@
       color: #7e57c2;
     }
 
-    .price {
+    .price-old {
+      text-decoration: line-through;
+      color: #a1a1aa;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+    }
+
+    .price-new {
       font-size: 1.3rem;
       font-weight: bold;
       color: #ec4899;
+      background: rgba(249, 168, 212, 0.2);
+      padding: 0.2rem 0.5rem;
+      border-radius: 8px;
     }
 
     ul {
@@ -115,7 +123,10 @@
 
   <!-- Informative Edit Packages -->
   <div class="package">
-    <h2>🌷 Basic Package – <span class="price">₹299</span></h2>
+    <h2>🌷 Basic Package – 
+      <span class="price-old">₹429</span> 
+      <span class="price-new">₹299</span>
+    </h2>
     <ul>
       <li>Captions</li>
       <li>Limited pictures & graphics</li>
@@ -124,7 +135,10 @@
   </div>
 
   <div class="package">
-    <h2>🌼 Intermediate Package – <span class="price">₹550</span></h2>
+    <h2>🌼 Intermediate Package – 
+      <span class="price-old">₹649</span> 
+      <span class="price-new">₹449</span>
+    </h2>
     <ul>
       <li>Captions</li>
       <li>Pictures & graphics</li>
@@ -134,7 +148,10 @@
   </div>
 
   <div class="package">
-    <h2>🌸 Proficient Package – <span class="price">₹850</span></h2>
+    <h2>🌸 Proficient Package – 
+      <span class="price-old">₹929</span> 
+      <span class="price-new">₹649</span>
+    </h2>
     <ul>
       <li>Captions with creative fonts, sizes & placement</li>
       <li>High-quality pictures & graphics</li>
@@ -144,17 +161,23 @@
   </div>
 
   <!-- Additional/Specialized Edits -->
-  <h2 class="section-title">✨ Additional & Specialized Edits</h2>
+  <h2 class="section-title">✨ Add-ons & Special Magic</h2>
 
   <div class="package">
-    <h2>📖 Carousel Edit – <span class="price">₹349</span></h2>
+    <h2>📖 Carousel Edit – 
+      <span class="price-old">₹349</span> 
+      <span class="price-new">₹244</span>
+    </h2>
     <ul>
       <li>Scrapbook-style multi-slide carousel</li>
     </ul>
   </div>
 
   <div class="package">
-    <h2>🍰 Baking Edit – <span class="price">₹250</span></h2>
+    <h2>🍰 Baking Edit – 
+      <span class="price-old">₹250</span> 
+      <span class="price-new">₹175</span>
+    </h2>
     <ul>
       <li>Soft pastel baking video edit</li>
       <li>Duration: Up to 1 minute</li>
@@ -162,14 +185,20 @@
   </div>
 
   <div class="package">
-    <h2>📄 Cover Page (for informative edits) – <span class="price">₹50</span></h2>
+    <h2>📄 Cover Page (for informative edits) – 
+      <span class="price-old">₹50</span> 
+      <span class="price-new">₹35</span>
+    </h2>
     <ul>
       <li>Intro-style page for better engagement</li>
     </ul>
   </div>
 
   <div class="package">
-    <h2>📸 YouTube Thumbnails – <span class="price">₹250</span></h2>
+    <h2>📸 YouTube Thumbnails – 
+      <span class="price-old">₹250</span> 
+      <span class="price-new">₹175</span>
+    </h2>
     <ul>
       <li>Engaging & visually appealing</li>
       <li>Click-worthy & customized for your content</li>
@@ -177,8 +206,7 @@
   </div>
 
   <div class="footer">
-    Want something magical & custom-made? Let’s make your dream reel happen ✨
+    🌈 Want something custom-made & full of pastel magic? Let’s bring your dream reel to life ✨
   </div>
 </body>
 </html>
-
