@@ -14,9 +14,8 @@
       --highlight: #f9a8d4;
       --badge-bg: #f472b6;
       --badge-color: #fff;
-      --sticker-color1: #ffb6c1;
-      --sticker-color2: #c4b5fd;
-      --sticker-color3: #fcd34d;
+      --section-box-bg: #fff0f5;
+      --section-box-shadow: rgba(244,114,182,0.3);
     }
     
     * {
@@ -74,6 +73,14 @@
       text-shadow: 1px 1px 3px rgba(255 182 193 / 0.7);
     }
     
+    .top-section .informative-box {
+      background: var(--section-box-bg);
+      border-radius: 24px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 8px 20px var(--section-box-shadow);
+      margin-bottom: 3rem;
+    }
+
     .package {
       background: var(--box-gradient);
       border-radius: 20px;
@@ -189,41 +196,15 @@
       text-shadow: 1px 1px 3px rgba(255 182 193 / 0.7);
     }
 
-    /* Sticker styles */
-    .sticker {
-      position: fixed;
-      pointer-events: none;
-      opacity: 0.7;
-      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
-      animation: floatUpDown 6s ease-in-out infinite;
+    /* Baking edits special note */
+    .special-note {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #db2777;
+      margin-top: 6px;
+      margin-left: 1.8rem;
       user-select: none;
-      z-index: 1;
-    }
-    .sticker.flower {
-      color: var(--sticker-color1);
-      font-size: 3rem;
-      left: 8%;
-      top: 20%;
-      animation-delay: 0s;
-    }
-    .sticker.star {
-      color: var(--sticker-color2);
-      font-size: 2.5rem;
-      left: 75%;
-      top: 60%;
-      animation-delay: 2s;
-    }
-    .sticker.heart {
-      color: var(--sticker-color3);
-      font-size: 2.7rem;
-      left: 50%;
-      top: 10%;
-      animation-delay: 4s;
-    }
-    
-    @keyframes floatUpDown {
-      0%, 100% { transform: translateY(0); opacity: 0.7;}
-      50% { transform: translateY(-15px); opacity: 0.9;}
+      letter-spacing: 0.03em;
     }
     
     /* Responsive */
@@ -239,72 +220,71 @@
       .bottom-section > h2 {
         font-size: 1.4rem;
       }
+      .top-section .informative-box {
+        padding: 1.5rem 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Stickers floating around -->
-  <div class="sticker flower" aria-hidden="true">🌸</div>
-  <div class="sticker star" aria-hidden="true">⭐️</div>
-  <div class="sticker heart" aria-hidden="true">💛</div>
-
   <h1>💖 Video Editing Services – Soft & Stunning Pricing</h1>
 
   <section class="top-section" aria-label="Informative video editing packages and cover page">
     <h2>INFORMATIVE EDITS</h2>
+    <div class="informative-box" role="group" aria-labelledby="informative-edits">
+      <div class="package" aria-label="Basic Package with discount price">
+        <div class="badge">30% OFF!</div>
+        <h2>🌷 Basic Package
+          <span>
+            <span class="old-price">₹427</span>
+            <span class="price">₹299</span>
+          </span>
+        </h2>
+        <ul>
+          <li>Captions</li>
+          <li>Limited pictures & graphics</li>
+          <li>Duration: Up to 1 minute</li>
+        </ul>
+      </div>
 
-    <div class="package" aria-label="Basic Package with discount price">
-      <div class="badge">30% OFF!</div>
-      <h2>🌷 Basic Package
-        <span>
-          <span class="old-price">₹427</span>
-          <span class="price">₹299</span>
-        </span>
-      </h2>
-      <ul>
-        <li>Captions</li>
-        <li>Limited pictures & graphics</li>
-        <li>Duration: Up to 1 minute</li>
-      </ul>
-    </div>
+      <div class="package" aria-label="Intermediate Package with discount price">
+        <div class="badge">30% OFF!</div>
+        <h2>🌼 Intermediate Package
+          <span>
+            <span class="old-price">₹641</span>
+            <span class="price">₹449</span>
+          </span>
+        </h2>
+        <ul>
+          <li>Captions</li>
+          <li>Pictures & graphics</li>
+          <li>Limited video clips</li>
+          <li>Duration: Up to 1 minute</li>
+        </ul>
+      </div>
 
-    <div class="package" aria-label="Intermediate Package with discount price">
-      <div class="badge">30% OFF!</div>
-      <h2>🌼 Intermediate Package
-        <span>
-          <span class="old-price">₹641</span>
-          <span class="price">₹449</span>
-        </span>
-      </h2>
-      <ul>
-        <li>Captions</li>
-        <li>Pictures & graphics</li>
-        <li>Limited video clips</li>
-        <li>Duration: Up to 1 minute</li>
-      </ul>
-    </div>
+      <div class="package" aria-label="Proficient Package with discount price">
+        <div class="badge">30% OFF!</div>
+        <h2>🌸 Proficient Package
+          <span>
+            <span class="old-price">₹927</span>
+            <span class="price">₹649</span>
+          </span>
+        </h2>
+        <ul>
+          <li>Captions with creative fonts, sizes & placement</li>
+          <li>High-quality pictures & graphics</li>
+          <li>Full video integration</li>
+          <li>Duration: Up to 1 minute</li>
+        </ul>
+      </div>
 
-    <div class="package" aria-label="Proficient Package with discount price">
-      <div class="badge">30% OFF!</div>
-      <h2>🌸 Proficient Package
-        <span>
-          <span class="old-price">₹927</span>
-          <span class="price">₹649</span>
-        </span>
-      </h2>
-      <ul>
-        <li>Captions with creative fonts, sizes & placement</li>
-        <li>High-quality pictures & graphics</li>
-        <li>Full video integration</li>
-        <li>Duration: Up to 1 minute</li>
-      </ul>
-    </div>
-
-    <div class="package" aria-label="Cover Page pricing">
-      <h2>📄 Cover Page (for Informative Edits) – <span class="price">₹50</span></h2>
-      <ul>
-        <li>Visually appealing title screen</li>
-      </ul>
+      <div class="package" aria-label="Cover Page pricing">
+        <h2>📄 Cover Page (for Informative Edits) – <span class="price">₹50</span></h2>
+        <ul>
+          <li>Visually appealing title screen</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -323,6 +303,9 @@
       <ul>
         <li>Duration: 1 minute</li>
       </ul>
+      <div class="special-note" aria-label="Limited offer and free content ideas">
+        🔥 Limited offer, content ideas are also free from time to time!
+      </div>
     </div>
 
     <div class="package" aria-label="Thumbnails pricing">
@@ -339,4 +322,5 @@
   </div>
 </body>
 </html>
+
 
